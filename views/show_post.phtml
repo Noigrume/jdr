@@ -1,0 +1,71 @@
+<?php $cssItem = 'members2.css'; ?>
+
+ <div id="container" class="row col-10">
+
+<div id="banner" class="row col-12">
+
+    <div class='col-5'>
+        <h1>VOTRE ESPACE</h1>
+    </div>
+    <div class="col-5">
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Règles JDR (liens externes)
+            </button>
+            <div class="dropdown-menu ">
+                <button class="dropdown-item" type="button">D&D</button>
+                <button class="dropdown-item" type="button">Naheubleuk</button>
+                <button class="dropdown-item" type="button">???</button>
+            </div>
+        </div>
+    </div>
+    <div class='col-2'>
+    <button type="button" class="btn btn-danger" id="deconnexion">Se deconnecter</button>
+    </div>
+</div>
+
+
+<div id="central" class="row col-12">
+
+    <div id="gauche" class="col-8">
+        <button type="button" class="btn btn-danger" id="new_game_button"> Créer nouvelle partie</button>
+
+
+        <div id="partie">
+            <button type="button" id="aide" class="btn btn-info">Info</button>
+            <h2>PARTIES RECENTES</h2>
+            <?php foreach($posts as $post): ?>
+                <h3><?= htmlspecialchars($post['title']); ?></h3>
+                <?php endforeach; ?>
+        </div>
+    </div>
+    <div id="droite" class="col-4">
+        <div class="col-12" id="pseudo">
+            <p>Pseudo:</p>
+            
+        </div>
+
+      
+
+        <div class="col-12" id="galery">
+            <h2>GALERY</h2>
+        </div>
+
+        <div class="col-12" id="map">
+            <img class="round" src="img/map.png" alt="map">
+        </div>
+
+        <div class="col-12" id="musique">
+            <img class="round" src="img/notes.png" alt="musique">
+        </div>
+
+        <div class="col-12" id="token">
+            <img class="round" src="img/token.png" alt="token">
+        </div>
+
+    </div>
+
+</div>
+
+
+    

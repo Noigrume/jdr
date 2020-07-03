@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="css/<?php echo  $view . ".css"; ?>" type="text/css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Handlee&family=Parisienne&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+
+    <nav>
+      <?php if (isAuthenticated()) : ?>
+        <a href="<?= buildUrl('/admin/logout'); ?>">Déconnexion</a>
+      <?php else : ?>
+        <a href="<?= buildUrl('/admin/login'); ?>">Connexion</a>
+      <?php endif; ?>
+    </nav>
+  </header>
+  <main>
+    <?php include VIEWS_DIR . '/' . $view . '.phtml'; ?>
+  </main>
+  <!-- Footer -->
+  <footer id="home_section" class="row col-12">
+    <div class="col-4" id="link_footer">
+
+      <h6 class="text-uppercase font-weight-bold">Rolly</h6>
+      <h6 class="text-uppercase font-weight-bold">About</h6>
+      <h6 class="text-uppercase font-weight-bold">Contact</h6>
+
+    </div>
+
+    <section class="newsletter content col-8">
+
+      <h6>INSCRIVEZ VOUS A LA NEWSLETTER</h6>
+      <div class="flex">
+        <input type="email" class="form-control" placeholder="Entrez votre email">
+
+        <button class="btn" type="submit">S'inscrire</button>
+
+      </div>
+    </section>
+
+    </div>
+  </footer>
+  <!-- Footer -->
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<!--<script src="form.js"></script> -->
+
+
+</html>

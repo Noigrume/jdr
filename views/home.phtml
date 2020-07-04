@@ -15,6 +15,12 @@
         </li>
     </ul>
 
+    <?php if (isAuthenticated()) : ?>
+        <a href="<?= buildUrl('/admin/logout'); ?>">Déconnexion</a>
+      <?php else : ?>
+        <a href="<?= buildUrl('/admin/login'); ?>">Connexion ADMIN</a>
+      <?php endif; ?>
+
 </nav>
 <!-- Navbar -->
 
@@ -97,7 +103,7 @@
 </div>
 
 <div id="jdr">
-<h3>Le JDR</h3>
+<h2>Le JDR</h3>
 <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
       Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
@@ -112,7 +118,7 @@
 
 </div>
 <div id="about">
-    <h3>A propos</h3>
+    <h2>A propos</h3>
 <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
       Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 

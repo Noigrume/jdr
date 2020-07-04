@@ -2,9 +2,10 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8">
-  <title>Accueil</title>
+<meta charset="utf-8" name="viewport" content="width=device-width">
+  <title><?php echo $view ; ?></title>
   <link rel="stylesheet" href="css/<?php echo  $view . ".css"; ?>" type="text/css">
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/fontawesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/all.min.css">
@@ -17,19 +18,12 @@
 </head>
 
 <body>
-  <header>
 
-    <nav>
-      <?php if (isAuthenticated()) : ?>
-        <a href="<?= buildUrl('/admin/logout'); ?>">Déconnexion</a>
-      <?php else : ?>
-        <a href="<?= buildUrl('/admin/login'); ?>">Connexion</a>
-      <?php endif; ?>
-    </nav>
-  </header>
   <main>
     <?php include VIEWS_DIR . '/' . $view . '.phtml'; ?>
   </main>
+
+  <?php if($view !== "login") :?>
   <!-- Footer -->
   <footer id="home_section" class="row col-12">
     <div class="col-4" id="link_footer">
@@ -44,9 +38,9 @@
 
       <h6>INSCRIVEZ VOUS A LA NEWSLETTER</h6>
       <div class="flex">
-        <input type="email" class="form-control" placeholder="Entrez votre email">
+        <input id="newsletter" type="email" class="form-control" placeholder="Entrez votre email">
 
-        <button class="btn" type="submit">S'inscrire</button>
+        <button id="newsletter" class="btn" type="submit">S'inscrire</button>
 
       </div>
     </section>
@@ -54,6 +48,7 @@
     </div>
   </footer>
   <!-- Footer -->
+  <?php endif ?>
 </body>
 <script src="js/jquery-3.4.1.min.js"></script>
 <!--<script src="form.js"></script> -->

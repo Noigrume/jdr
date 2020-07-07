@@ -1,0 +1,33 @@
+h2{
+    color: salmon;
+    font-size: 3em;
+    text-align: center;
+    padding: 5%;
+    font-weight: bolder;
+    border: 1px solid salmon;
+}
+
+table{
+    width: 100%;
+    padding: 10%;
+    border: rgba(0, 0, 0, 0) solid 1px;
+    
+}
+
+body{
+    background-color: rgb(151, 228, 205) !important;
+}
+
+nav{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+th, td{
+    padding-left: 5%;
+}
+
+.action{
+    text-align: right;
+    padding-right: 5%;
+}

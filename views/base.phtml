@@ -5,7 +5,7 @@
 <meta charset="utf-8" name="viewport" content="width=device-width">
   <title><?php echo $view ; ?></title>
   <link rel="stylesheet" href="css/<?php echo  $view . ".css"; ?>" type="text/css">
-
+ 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/fontawesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/all.min.css">
@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Handlee&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 </head>
 
@@ -23,7 +24,7 @@
     <?php include VIEWS_DIR . '/' . $view . '.phtml'; ?>
   </main>
 
-  <?php if($view !== "login") :?>
+  <?php if($view !== "login" && $view !== "admin/admin") :?>
   <!-- Footer -->
   <footer id="home_section" class="row col-12">
     <div class="col-4" id="link_footer">
